@@ -8,5 +8,17 @@
   },
   "keywords": [],
   "author": "muryoimpl",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "electron-prebuilt": "^0.33.3",
+    "fbjs": "^0.2.1",
+    "lodash": "^3.10.1",
+    "marked": "^0.3.5",
+    "material-ui": "^0.12.0",
+    "react": "^0.13.3",
+    "react-dom": "^0.14.0-rc1",
+    "react-redux": "^3.0.0",
+    "react-tap-event-plugin": "^0.1.8",
+    "redux": "^3.0.2"
+  }
 }
