@@ -11,10 +11,10 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-  var mainWindow    = new BrowserWindow();
+  var mainWindow    = new BrowserWindow({width: 1000, height: 700});
   var displayWindow = true;
 
-  var appIcon     = new Tray();
+  var appIcon     = new Tray('./images/task-trackr-icon.png');
   var contextMenu = Menu.buildFromTemplate([
     {
       label: 'show window',
@@ -61,7 +61,7 @@ app.on('ready', function() {
   //  }
   //});
 
-  if (!ret) {
-    console.log('registration error');
-  }
+  //if (!ret) {
+  //  console.log('registration error');
+  //}
 });
