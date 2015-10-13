@@ -1,4 +1,4 @@
-import jsdom from 'mocha-jsdom';
-import React from 'react/addons';
+import chai, { expect } from 'chai';
+import chaiImmutable from 'chai-immutable';
 
-import { expect } from 'chai';
+chai.use(chaiImmutable);
