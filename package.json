@@ -7,7 +7,7 @@
     "electron": "electron .",
     "start": "DEBUG=true webpack-dev-server",
     "build": "webpack --progress --color",
-    "test": "mocha --compilers js:babel/register --recursive",
+    "test": "mocha --opts ./test/mocha.opts --compilers js:babel/register --require ./test/test_helper.js --recursive",
     "test:watch": "npm test -- --watch"
   },
   "keywords": [],
