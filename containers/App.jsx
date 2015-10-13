@@ -6,26 +6,39 @@ import _ from 'lodash';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 //bootstrap
-import { Navbar, NavBrand, Tabs, Tab } from 'react-bootstrap';
+import { Button, Col, Glyphicon, Input, Nav, Navbar, NavBrand, NavItem, Tabs, Tab } from 'react-bootstrap';
 
-export default class App extends React.Component {
+export class App extends React.Component {
+  handlePlusClick(e) {
+    e.preventDefault();
+    //フォームに置き換え
+    //Enter で追加する
+  }
+
   render() {
     return (
-      <div>
+      <main>
         <Navbar>
-          <NavBrand>React-Bootstrap</NavBrand>
+          <Nav>
+            <NavItem>
+              <Input type="select">
+                <option value="select">select</option>
+                <option value="other">...</option>
+              </Input>
+            </NavItem>
+          </Nav>
         </Navbar>
         <Tabs>
           <Tab eventKey={1} title="tab1">tab1</Tab>
         </Tabs>
-      </div>
+      </main>
     );
   }
 }
 
+App.propTypes = {};
 
 export default connect(state => {
   return {
-
   }
 })(App);
