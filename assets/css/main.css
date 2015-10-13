@@ -1,1 +1,12 @@
+.navbar {
+  margin-bottom: 0;
+}
 
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: none !important;
+}
+
+li.active a {
+  background-color: #DDDDDD !important;
+}

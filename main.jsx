@@ -27,9 +27,6 @@ React.render(
     <Provider store={store}>
       {() => <App />}
     </Provider>
-    <DebugPanel top right bottom>
-      <DevTools store={store} monitor={LogMonitor} />
-    </DebugPanel>
   </div>,
   document.getElementById('content')
 );

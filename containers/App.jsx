@@ -18,18 +18,18 @@ export class App extends React.Component {
   render() {
     return (
       <main>
-        <Navbar>
-          <Nav>
-            <NavItem>
-              <Input type="select">
-                <option value="select">select</option>
-                <option value="other">...</option>
-              </Input>
-            </NavItem>
-          </Nav>
-        </Navbar>
+        <nav className="navbar navbar-default">
+          <form className="navbar-form" role="search">
+            <Input type="select">
+              <option value="select">select project</option>
+              <option value="create">create project</option>
+            </Input>
+          </form>
+        </nav>
         <Tabs>
-          <Tab eventKey={1} title="tab1">tab1</Tab>
+          <Tab eventKey={1} title="Current"></Tab>
+          <Tab eventKey={2} title="Icebox"></Tab>
+          <Tab eventKey={3} title="Done"></Tab>
         </Tabs>
       </main>
     );

@@ -11,7 +11,7 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-  var mainWindow    = new BrowserWindow({width: 1000, height: 700});
+  var mainWindow    = new BrowserWindow({width: 400, height: 700});
   var displayWindow = true;
 
   var appIcon     = new Tray('./images/task-trackr-icon.png');
