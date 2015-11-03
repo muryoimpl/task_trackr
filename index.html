@@ -4,12 +4,183 @@
     <meta charset="utf-8" />
     <title>task trackr</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="./vendor/assets/pure-release-0.6.0/pure-min.css">
+    <link rel="stylesheet" href="./vendor/assets/pure-release-0.6.0/pure-nr-min.css">
     <link rel="stylesheet" href="./vendor/assets/font-awesome-4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
   </head>
   <body>
-    <div id="content"></div>
+    <div id="content">
+
+      <div class="header">
+        <div class="pure-menu pure-menu-horizontal">
+          <form class="pure-form">
+            <fieldset>
+              <select class="project">
+                <option value="a">btb</option>
+                <option value="b">line</option>
+                <option value="c">あああああ</option>
+                <option value="d">スリジャヤワルダナプラコッテ</option>
+              </select>
+            </fieldset>
+          </form>
+        </div>
+
+        <div id="project-menu" class="pure-menu pure-menu-horizontal project-menu">
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-plus"></i></a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-pencil"></i></a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-minus"></i></a></li>
+          </ul>
+        </div>
+
+        <div id="panel-menu" class="pure-menu pure-menu-horizontal">
+          <ul class="pure-menu-list">
+            <li class="pure-menu-active pure-menu-item"><a href="#" class="pure-menu-link">InBox</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Doing</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Done</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-task">
+        <span>
+          <i class="fa fa-plus"></i>
+        </span>
+      </div>
+
+      <div class="panel">
+        <div class="tasks">
+          <div class="task">
+            <header>
+              <a href="#" class="caret-icon"><i class="fa fa-caret-right"></i></a>
+
+              <span class="icons">
+                <span class="type-icon"><i class="fa fa-tasks"></i></span>
+                <span class="comment-icon"><i class="fa fa-comment-o"></i></span>
+              </span>
+
+              <span class="name">ほほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげげほげ</span>
+            </header>
+          </div>
+
+          <!-- open start -->
+          <div class="task">
+            <div class="edit">
+              <section>
+                <a href="#" class="caret-icon"><i class="fa fa-caret-down"></i></a>
+
+                <form class="pure-form">
+                  <fieldset>
+                    <textarea></textarea>
+                  </fieldset>
+
+                  <aside>
+                    <nav>
+                      <section>
+                        <div class="actions">
+                          <button class="btn id">ID</button>
+                          <input type="text" class="input-id" readonly value="1234567890" />
+                          <button class="btn trash"><i class="fa fa-trash"></i></button>
+
+                          <button class="btn close-btn pure-button pure-button-primary">close</button>
+                        </div>
+                      </section>
+                    </nav>
+
+                    <div class="information">
+                      <div class="row">
+                        <em>state</em>
+                        <div class="btn label pure-button">Start</div>
+                      </div>
+
+                      <div class="row updated-at">
+                        updated at
+                        <span>2015-11-03 Tue 00:00:00</span>
+                      </div>
+                    </div>
+
+                  </aside>
+                </form>
+              </section>
+
+              <section class="description">
+                <form class="pure-form">
+                  <h4>Desctiption</h4>
+                  <div class="markdowned">
+                    <p>hogehoge</p>
+                  </div>
+                  <textarea></textarea>
+
+                  <div class="actions">
+                    <a href="#">cancel</a>
+                    <button class="pure-button done">Done</button>
+                  </div>
+                </form>
+              </section>
+
+              <section class="subtasks">
+                <h4>Subtask</h4>
+                <form class="pure-form">
+                  <fieldset>
+                    <div class="row editing">
+                      <input type="checkbox" disabled>
+                      <input type="text" value="あいうえおかきくけこさしすせそなにぬねの">
+                      <button class="save btn pure-button pure-button-primary">Save</button>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="row">
+                      <input type="checkbox" disabled checked>
+                      <div class="name-value">がんばるるるるるるるるるるううううううううううううううううううううううううう</div>
+                      <div class="buttons">
+                        <button><i class="fa fa-pencil"></i></button>
+                        <button><i class="fa fa-remove"></i></button>
+                      </div>
+                    </div>
+                  </fieldset>
+
+
+                  <fieldset>
+                    <div class="row">
+                      <input type="checkbox" disabled>
+                      <input type="text">
+                      <button class="add btn pure-button pure-button-primary">Add</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </section>
+
+              <section class="activities">
+                <form class="pure-form">
+                  <h4>Activity</h4>
+
+                  <div class="markdowned">
+                    <div class="activity">
+                      <span>2015-10-30 21:00:00</span>
+                      <div class="buttons">
+                        <i class="fa fa-pencil"></i>
+                        <i class="fa fa-remove"></i>
+                      </div>
+                    </div>
+
+                    <p>hogehoge</p>
+                  </div>
+                  <textarea></textarea>
+
+                  <div class="actions">
+                    <a href="#">cancel</a>
+                    <button class="pure-button done">Add</button>
+                  </div>
+                </form>
+              </section>
+            </div>
+          </div>
+          <!-- open end -->
+
+        </div>
+      </div>
+    </div>
   </body>
-  <script src='./bundle.js'></script>
+  <!-- <script src='./bundle.js'></script> -->
 </html>

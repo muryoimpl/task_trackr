@@ -1,12 +1,345 @@
-.navbar {
-  margin-bottom: 0;
+html,body {
+  background-color: #2c2d2f;
+  height: 100%;
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border: none !important;
+p {
+  margin: 0.3em 0.3em 0.3em 0.3em;
+}
+h4 {
+  margin: 1.33em 0 5px 0;
+  text-transform: uppercase;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+button {
+  padding: .2em;
+}
+.pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea {
+  padding: .3em .3em;
+}
+.pure-form fieldset {
+  padding: 0;
 }
 
-li.active a {
-  background-color: #DDDDDD !important;
+.btn {
+  padding: .2em .5em;
+}
+
+#content {
+  min-width: 400px;
+  max-width: 400px;
+  border: 5px solid #000000;
+  height: calc(100% - 10px);
+  min-height: calc(100% - 10px);
+  height: auto;
+}
+
+/* header project select-box */
+.header {
+  margin-top: -5px;
+}
+.header .project {
+  width: 100%;
+}
+
+/* project menu */
+#project-menu.project-menu {
+  /* background-color: #E8E6DF; */
+}
+#project-menu a.pure-menu-link {
+  color: #eee;
+}
+#project-menu a.pure-menu-link:hover,
+#project-menu a.pure-menu-link:focus
+{
+  color: #777!important;
+  font-weight: bold;
+}
+
+/* panel menu */
+#panel-menu {
+  margin-top: 5px;
+  padding-bottom: 0;
+  background-color: #2c2d2f;
+}
+#panel-menu ul {
+  background-color: #eee;
+}
+#panel-menu .pure-menu-item {
+  font-weight: bold !important;
+  margin-left: 0;
+  padding-left: 0;
+}
+#panel-menu .pure-menu-active > .pure-menu-link,
+#panel-menu .pure-menu-link:hover,
+#panel-menu .pure-menu-link:focus {
+  background-color: #2c2d2f;
+  color: #fff;
+}
+
+/* plus button */
+.add-task {
+  border-top: 1px solid #eee;
+  background-color: #555;
+  height: 30px;
+  text-align: right;
+  position: relative;
+  color: #fff;
+}
+.add-task span {
+  margin: auto;
+  position: absolute;
+  top:8px;
+  bottom:0;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* panels and panel */
+.panel {
+  /* background-color: #eee; */
+  color: #fff;
+  overflow-y: scroll;
+  height: calc(100% - 10px);
+  min-height: calc(100% - 10px);
+  -webkit-overflow-scrolling: touch;
+
+  height: 700px; /* TODO テスト用の適当な値 */
+}
+/* task */
+.panel .task {
+  background-color: #e4eff7;
+  color: black;
+  /* margin: 1px 1px 1px 1px; */
+  padding: 1px 1px 1px 5px;
+  border-top: 1px solid #eefce2;
+  border-bottom: 2px solid #c3d5b4;
+  cursor: move;
+  display: block;
+}
+.panel .task:last-child {
+  border-bottom: none;
+}
+.panel .task header {
+  margin: 2px 5px 5px 0;
+}
+.panel .task:hover {
+  background-color: #E8E6DF;
+}
+.panel .task .caret-icon {
+  float: left;
+  width: 15px;
+}
+.panel .task .icons {
+  float: left;
+  width: 50px;
+}
+.panel .task .icons .type-icon {
+  float: left;
+  width: 15px;
+}
+.panel .task .icons .comment-icon {
+  float: left;
+  width: 15px;
+  margin-top: -2px;
+  margin-left: 5px;
+}
+.panel .task .name {
+  margin-left: 5px;
+  display: table;
+}
+
+.panel .task form textarea {
+  height: 50px;
+  resize: none;
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+}
+
+.panel .task .edit {
+  background-color: #E8E6DF;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+.panel .task .edit .actions {
+  margin: 0 0 10px 15px;
+}
+
+.panel .task .edit .actions .id {
+  font-weight: bold;
+  margin: 0;
+  float: left;
+}
+.panel .task .edit .actions input[type=text] {
+  padding: 0 5px;
+}
+.panel .task .edit .actions .input-id {
+  margin-left: 0px;
+  width: 100px;
+  height: 1.7em;
+  vertical-align: baseline;
+  border-radius: 0 2px 2px 0;
+  text-align: right;
+  float: left;
+}
+.panel .task .edit .actions .trash {
+  margin-left: 10px;
+  float: left;
+}
+.panel .task .edit .actions .close-btn {
+  float: right;
+  padding: 0.3em 1.5em;
+}
+.panel .task .edit .actions:after {
+  clear: both;
+  content: "";
+  display: block;
+  visibility: hidden;
+}
+
+.panel .task .edit .information {
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #c1c3c5;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.panel .task .edit .information .row {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 0 9px;
+  border-top: 1px solid #c1c3c5;
+}
+
+.panel .task .edit .information .row:first-child {
+  border-top: none;
+}
+.panel .task .edit .information .row >em {
+  color: #505050;
+  text-transform: uppercase;
+}
+.panel .task .edit .information .label {
+  float: right;
+  background-color: #c1c3c5;
+  margin: 3px 0;
+  border: 1px solid #24364C;
+}
+.panel .task .edit .information .row.updated-at {
+  text-align: center;
+  color: #505050;
+}
+.panel .task .edit textarea {
+  height: 100px;
+  resize: none;
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.panel .task .edit .markdowned {
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.panel .task .edit .markdowned .activity {
+  position: relative;
+  color: #c1c3c5;
+}
+.panel .task .edit .markdowned .activity .buttons {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.panel .task .edit .markdowned .activity .buttons i {
+  cursor: pointer;
+}
+.panel .task .edit .markdowned .activity .buttons i:hover {
+  color: #000;
+}
+.panel .task .edit .actions {
+  margin: 0;
+  text-align: right;
+}
+.panel .task .edit .actions .done {
+  background-color: #555;
+  color: #fff;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: right;
+}
+
+.panel .task .edit .subtasks {
+  padding: 0;
+  margin: 2px 2px 2px 2px;
+  padding: 2px 2px 2px 2px;
+}
+.panel .task .edit .subtasks .row {
+  position: relative;
+  min-height: 35px;
+  padding: 5px 0 0 0;
+}
+.panel .task .edit .subtasks .row fieldset {
+  padding-top: 5px;
+}
+.panel .task .edit .subtasks .row input[type=checkbox] {
+  position: absolute;
+  top: .75em;
+  left: 5px;
+}
+.panel .task .edit .subtasks .row.added {
+  background-color: #c1c3c5;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.panel .task .edit .subtasks .row input[type=text] {
+  vertical-align: middle;
+  width: 280px;
+  margin-left: 25px;
+}
+.panel .task .edit .subtasks .row.editing {
+  background-color: #c1c3c5;
+}
+/*
+.panel .task .edit .subtasks .row .add {
+  font-size: .9em;
+  vertical-align: middle;
+  padding: .2em .75em;
+}
+*/
+.panel .task .edit .subtasks .row .save {
+  font-size: .9em;
+  vertical-align: middle;
+}
+.panel .task .edit .subtasks .row .name-value {
+  width: 280px;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-left: 25px;
+}
+.panel .task .edit .subtasks .row .buttons {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
 }
