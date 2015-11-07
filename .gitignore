@@ -3,6 +3,8 @@
 bundle.js
 bundle.js.map
 
+assets/css/main.css
+
 # https://github.com/github/gitignore/blob/master/Node.gitignore
 # Logs
 logs
