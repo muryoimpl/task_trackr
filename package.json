@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "electron-prebuilt": "^0.34.3",
+    "lodash": "^3.10.1",
+    "marked": "^0.3.5",
+    "pouchdb": "^5.1.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-fa": "^4.0.0",
