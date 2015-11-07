@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron-prebuilt": "^0.34.3"
+    "electron-prebuilt": "^0.34.3",
+    "react": "^0.14.2"
   },
   "devDependencies": {
     "webpack": "^1.12.3",
