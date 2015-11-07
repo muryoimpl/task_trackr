@@ -29,6 +29,7 @@
     "jsdom": "^7.0.2",
     "mocha": "^2.3.3",
     "mocha-jsdom": "^1.0.0",
+    "node-sass": "^3.4.1",
     "webpack": "^1.12.3",
     "webpack-merge": "^0.2.0"
   }
