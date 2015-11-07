@@ -14,7 +14,7 @@ app.on('ready', function() {
   var mainWindow    = new BrowserWindow({'max-width': 510, 'min-width': 510});
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
-  mainWindow.openDevTools();
+  //mainWindow.openDevTools();
 
   mainWindow.on('closed', function() {
     mainWindow = null;
