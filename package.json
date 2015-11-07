@@ -24,6 +24,11 @@
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
+    "chai": "^3.4.0",
+    "chai-immutable": "^1.5.2",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.3",
+    "mocha-jsdom": "^1.0.0",
     "webpack": "^1.12.3",
     "webpack-merge": "^0.2.0"
   }
