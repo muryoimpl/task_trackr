@@ -1,14 +1,23 @@
 {
   "name": "task_trackr",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A task tracker.",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "electron": "electron .",
+    "build": "webpack --progress --color",
+    "build:sass": "node-sass assets/css/main.sass -o assets/css",
+    "test": "mocha --opts ./test/mocha.opts --compilers js:babel/register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm test -- --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "electron",
+    "react",
+    "redux",
+    "pouchdb"
+  ],
+  "author": "muryoimpl",
+  "license": "MIT",
   "dependencies": {
     "electron-prebuilt": "^0.34.3",
     "lodash": "^3.10.1",
