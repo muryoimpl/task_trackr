@@ -1,7 +1,6 @@
 var path    = require('path');
 var webpack = require('webpack');
 var merge   = require('webpack-merge');
-var pkg     = require('./package.json');
 
 var ROOT_PATH = path.resolve(__dirname);
 var TARGET = process.env.npm_lifecycle_event;
@@ -20,8 +19,8 @@ var common = {
 
   resolve: {
     extensions: ['', '.js', '.jsx']
-  },
-}
+  }
+};
 
 if (TARGET === 'start') {
   module.exports = merge(common, {
@@ -64,6 +63,6 @@ if (TARGET === 'build') {
           exclude: path.resolve(ROOT_PATH, 'node_modules')
         }
       ]
-    },
+    }
   });
 }
